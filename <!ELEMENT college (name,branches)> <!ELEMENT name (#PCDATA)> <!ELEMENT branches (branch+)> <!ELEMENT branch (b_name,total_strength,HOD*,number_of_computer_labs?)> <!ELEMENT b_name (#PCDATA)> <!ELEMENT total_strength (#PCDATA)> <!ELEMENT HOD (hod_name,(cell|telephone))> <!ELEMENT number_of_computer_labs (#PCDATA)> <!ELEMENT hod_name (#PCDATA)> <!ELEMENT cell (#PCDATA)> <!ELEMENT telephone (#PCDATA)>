@@ -1,0 +1,42 @@
+<!ELEMENT college (name,branches)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT branches (branch+)>
+<!ELEMENT branch (b_name,total_strength,HOD*,number_of_computer_labs?)>
+<!ELEMENT b_name (#PCDATA)>
+<!ELEMENT total_strength (#PCDATA)>
+<!ELEMENT HOD (hod_name,(cell|telephone))>
+<!ELEMENT number_of_computer_labs (#PCDATA)>
+<!ELEMENT hod_name (#PCDATA)>
+<!ELEMENT cell (#PCDATA)>
+<!ELEMENT telephone (#PCDATA)>
+
+
+---------------xml-------------------
+<?xml version="1.0"?>
+<!DOCTYPE college SYSTEM "note1.dtd">
+<college>
+  <name>College of Engg.</name>
+  <branches>
+	<branch>
+		<b_name>Computer</b_name>
+		<total_strength>100</total_strength>
+		<HOD>
+			<hod_name>Sudhakar Sharma</hod_name>
+			<telephone>02222234739</telephone>
+		</HOD>
+		<HOD>
+			<hod_name>Nayan Jadhav</hod_name>
+			<telephone>02222234738</telephone>
+		</HOD>
+		<number_of_computer_labs>4</number_of_computer_labs>
+	</branch>
+	<branch>
+		<b_name>Civil</b_name>
+		<total_strength>150</total_strength>
+		<HOD>
+			<hod_name>Suresh Joshi</hod_name>
+			<cell>8877343212</cell>
+		</HOD>
+	</branch>
+  </branches>
+</college>
